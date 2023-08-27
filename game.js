@@ -61,7 +61,7 @@ $(document).ready(function(){
           nextSequence();
           }, 1000);
         }    
-    } else {
+    } else if (started == true && gamePattern[indexNumber] !== userClickedPattern[indexNumber]) {
       userClickedPattern = [];
       gamePattern = [];
       level = 0;
