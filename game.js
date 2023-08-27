@@ -15,6 +15,14 @@ $(document).ready(function(){
     }
   });
 
+  document.addEventListener("touchstart", function() {
+    if (!started) {
+      $("h1").html("Level 0")
+      nextSequence();
+      started = true;
+    }
+  });
+
   function nextSequence() {                                       
     let randomNumber = Math.floor(Math.random() * 4);
     let randomChosenColour = buttonColours[randomNumber];
